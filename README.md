@@ -1,10 +1,10 @@
 # Catalogo de recetas
 
-## This is a recipe catalog based project made using React and Redux
+### This is a recipe catalog based project made using React and Redux
 
-## Catalog-of-Recipes is a front-end application that will help you retrieve food images from The mealDB, filter and access details of unique food.
+### Catalog-of-Recipes is a front-end application that will help you retrieve food images from The mealDB, filter and access details of unique food.
 
-## Built With
+### Built With
 
 ```
 Node.js
@@ -20,20 +20,20 @@ React-Testing-Library
 Redux-mock-store
 ```
 
-## Live
+### Live
 
 ```
 https://catalogoderecetas.netlify.app
 ```
 
 
-## Clone repo 🔧
+### Clone repo 🔧
 
 ```
 git clone https://github.com/GonzaloVolonterio/catalogoderecetas
 ```
 
-## Install🔧
+### Install🔧
 
 ```
 npm install
@@ -43,7 +43,7 @@ npm install
 npm start
 ```
 
-## Test🔧
+### Test🔧
 
 ```
 npm test
