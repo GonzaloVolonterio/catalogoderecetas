@@ -1,18 +1,25 @@
-import React from 'react';
+import classNames from 'classnames';
 import { Link } from 'react-router-dom';
-import Filter from '../containers/Filter';
+import Search from '../containers/Search';
+import styles from '../styles/Header.module.css';
+
+const cx = classNames;
 
 const Header = () => (
-  <div className="container-fluid d-flex flex-row justify-content-between py-3 px-5 header">
-    <Link to="/">
-      <img
-        alt="Logo"
-        src="https://seeklogo.com/images/F/food-logo-59E5A73AFD-seeklogo.com.png"
-        className="logo"
-      />
-    </Link>
-    <Filter />
-  </div>
+  <nav className={cx(styles.nav)}>
+    <ul className={cx(styles.menus)}>
+      <li className={cx(styles.menu__item)}>
+        <Link className={cx(styles.menu__link)} to="/">Home</Link>
+      </li>
+      <li className={cx(styles.menu__item)}>
+        <Link className={cx(styles.menu__link)} to="/categories">Categories</Link>
+      </li>
+    </ul>
+
+    <div className={cx(styles.menu__search)}>
+      <Search />
+    </div>
+  </nav>
 );
 
 export default Header;

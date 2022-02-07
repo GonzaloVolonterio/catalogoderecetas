@@ -1,18 +1,25 @@
-import React, { useEffect } from 'react';
-import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import MealCard from '../components/MealCard';
-import * as actionsType from '../store/actions/actionTypes';
-import { changeCategory } from '../store/actions/index';
-import { fetchMealsByCategory } from '../store/actions/thunk';
+import PropTypes from 'prop-types';
+import { useEffect } from 'react';
+import { useParams } from 'react-router-dom';
+import classNames from 'classnames';
+import * as actionsType from '../redux/actions/actionTypes';
+import Meal from '../components/Meal';
+import { fetchMealsByCategory } from '../redux/actions/thunk';
+import { changeCategory } from '../redux/actions/index';
+import grid from '../styles/grid.css';
+
+const cx = classNames.bind(grid);
 
 const Meals = ({
-  meals: { meals, status, error }, category, changeCategory, fetchMealsByCategory,
+  meals: { meals, status, error }, fetchMealsByCategory, category, changeCategory,
 }) => {
+  const { categoryType } = useParams();
+
   useEffect(() => {
-    changeCategory(category);
-    if (status === actionsType.IDLE_MEALS || category) {
-      fetchMealsByCategory(category || 'beef');
+    changeCategory(categoryType);
+    if (status === actionsType.IDLE_MEALS || categoryType) {
+      fetchMealsByCategory(categoryType || 'beef');
     }
   }, [category]);
 
@@ -30,16 +37,14 @@ const Meals = ({
   }
 
   return (
-    <div className="container">
-      <div className="row">
-        {
-          meals?.map((meal) => (
-            <MealCard key={meal.idMeal} meal={meal} onClick={() => {}} />
-          ))
-        }
-      </div>
+    <div className={cx('grid', 'grid-column', 'grid-gap-1/5')}>
+      {meals && meals.map((meal) => <Meal key={meal.idMeal} meal={meal} />)}
     </div>
   );
+};
+
+Meals.defaultProps = {
+  category: 'Beef',
 };
 
 Meals.propTypes = {
@@ -51,10 +56,6 @@ Meals.propTypes = {
   category: PropTypes.string,
   changeCategory: PropTypes.func.isRequired,
   fetchMealsByCategory: PropTypes.func.isRequired,
-};
-
-Meals.defaultProps = {
-  category: 'chicken',
 };
 
 const mapStateToProps = (state) => ({
