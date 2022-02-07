@@ -23,7 +23,8 @@ Redux-mock-store
 ### Live
 
 ```
-https://catalogoderecetas.netlify.app
+https://catalogueofrecipes.netlify.app/
+
 ```
 
 
