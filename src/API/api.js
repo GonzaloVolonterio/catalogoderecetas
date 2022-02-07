@@ -1,9 +1,5 @@
 import API from '../config/config';
 
-/**
- * @description To fetch meals from a category selected in the dropdown
- * @param {*} category: string
- */
 const fetchMeals = async (category) => {
   const url = `${API.BASE_URL}/${API.FILTER_ENDPOINT}/?c=${category}`;
   const response = await fetch(url);
@@ -16,10 +12,18 @@ const fetchMeals = async (category) => {
   throw Error(404);
 };
 
-/**
- * @description To fetch a specific meal by its ID.
- * @param {*} id: number
- */
+const fetchSearchMeals = async (query) => {
+  const url = `${API.BASE_URL}/${API.SEARCH_ENDPOINT}/?s=${query}`;
+  const response = await fetch(url);
+
+  if (response.status === 200) {
+    const data = await response.json();
+    return data;
+  }
+
+  throw Error(404);
+};
+
 const fetchMeal = async (id) => {
   const url = `${API.BASE_URL}/${API.LOOKUP_ENDPOINT}/?i=${id}`;
   const response = await fetch(url);
@@ -32,4 +36,4 @@ const fetchMeal = async (id) => {
   throw Error(404);
 };
 
-export { fetchMeals, fetchMeal };
+export { fetchMeals, fetchSearchMeals, fetchMeal };

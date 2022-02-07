@@ -4,7 +4,7 @@ import { MemoryRouter } from 'react-router-dom';
 import ConfigureMockStore from 'redux-mock-store';
 import thunk from 'redux-thunk';
 import Meals from '../Meals';
-import * as actionsType from '../../store/actions/actionTypes';
+import * as actionsType from '../../redux/actions/actionTypes';
 
 const mockStore = ConfigureMockStore([thunk]);
 jest.mock('../../API/api');
