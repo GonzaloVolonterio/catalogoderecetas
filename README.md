@@ -7,14 +7,14 @@
 ### Built With
 
 ```
-Node.js
+
 React
 React-DOM
 React-Create-App
 Redux
 CSS
 React-Testing-Library
-Tested With
+Tested With :
 Jest
 React-Testing-Library
 Redux-mock-store
