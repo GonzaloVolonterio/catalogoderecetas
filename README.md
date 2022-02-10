@@ -10,7 +10,6 @@
 
 React
 React-DOM
-React-Create-App
 Redux
 CSS
 React-Testing-Library
