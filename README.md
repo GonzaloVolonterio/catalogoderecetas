@@ -11,28 +11,21 @@
 React
 React-DOM
 Redux
+JSX
 CSS
-React-Testing-Library
-Tested With :
-Jest
-React-Testing-Library
-Redux-mock-store
-```
 
+```
 ### Live
 
 ```
-https://catalogueofrecipes.netlify.app/
+
 
 ```
-
-
 ### Clone repo 🔧
 
 ```
 git clone https://github.com/GonzaloVolonterio/catalogoderecetas
 ```
-
 ### Install🔧
 
 ```
@@ -42,12 +35,9 @@ npm install
 ```
 npm start
 ```
-
 ### Test🔧
 
 ```
 npm test
 
 ```
-
-
