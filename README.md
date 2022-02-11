@@ -7,13 +7,11 @@
 ### Built With
 
 ```
-
 React
 React-DOM
 Redux
 JSX
 CSS
-
 ```
 ### Live
 
