@@ -1,4 +1,4 @@
-# Catalogo de recetas
+# Catalogue of Recipes
 
 ### This is a recipe catalog based project made using React and Redux
 
