@@ -39,3 +39,6 @@ npm start
 npm test
 
 ```
+
+![2](https://user-images.githubusercontent.com/64506662/234716784-197a0ec1-282b-4fdb-af34-4a7a4267dc9f.png)
+
